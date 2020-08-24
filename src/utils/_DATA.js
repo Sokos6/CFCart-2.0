@@ -20,3 +20,25 @@ let phones = {
     inCart: 'true',
   },
 };
+
+export function _getPhones() {
+  return new Promise((res, rej) => {
+    setTimeout(() => res({ ...phones }), 1000);
+    console.log(_getPhones());
+  });
+}
+
+export function setInCart({ id, inCart }) {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      phones = {
+        ...phones,
+        [id]: {
+          ...phones[id],
+          inCart: inCart,
+        },
+      };
+      res();
+    }, 500);
+  });
+}
