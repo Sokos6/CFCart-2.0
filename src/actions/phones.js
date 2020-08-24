@@ -1,6 +1,6 @@
 export const RECEIVE_PHONES = 'RECEIVE_PHONES';
 
-export function recievePhones(phones) {
+export function receivePhones(phones) {
   return {
     type: RECEIVE_PHONES,
     phones,
